@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+html,body{ 
+	width:100%;
+	height:100%;
+	background:#111;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+
+canvas{
+  display:block;
+  vertical-align: bottom ;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #232427;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.logo{
+  position: absolute;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  height: 350px;
+  width: auto;
+}
+
+.cont{
+  perspective: 1000px;
+  position: absolute;
+  width: 263px;
+  height: 350px;
+  top: 28%;
+  left: 8%;
+  z-index: 1;
+}
+
+.intro{
+  color: #fff;
+  position: absolute;
+  letter-spacing: 3px;
+  font-family: 'JetBrains Mono', monospace;
+  top: 30%;
+  left: 30%;
+  
+}
+
+.name{
+  font-size: 50px;  
+}
+
+.uwinContent{
+  position: absolute;
+  top: 155%;
+}
+
+.uwinLogo{
+  position: absolute;
+  width: auto;
+  height: 60px;
+}
+
+.uwinName{
+  position: absolute;
+  font-size: 23px;
+  left: 14%;
+  top: 180%;
+}
+
+
+.typeContainer{
+  font-size: 24px;
+
+  position: absolute;
+  left: 4%;
+  top: 320%;
+}
+
+.typeContainer p{
+  text-align: center;
+}
+
+.typed-text{
+  color: #36b902;
+}
+
+.cursor{
+  display: inline-block;
+  width: 2px;
+  background-color: #fff;
+  margin-left: 0.1rem;
+  animation: blink 1s infinite;
+}
+
+.cursor.typing{
+  animation: none;
+}
+
+@keyframes blink{
+  0%{
+    background-color: #fff;
+  }
+  49%{
+    background-color: #fff;
+  }
+  50%{
+    background-color: transparent;
+  }
+  99%{
+    background-color: transparent;
+  }
+  100%{
+    background-color: #fff;
+  }
+}
+
+
+.icons{
+  display: flex;
+  position: absolute;
+  left: 30%;
+  bottom: 10%;
+}
+
+.iconsUL{
+  display: flex;
+  position: relative;
+}
+
+.iconsLI{
+ position: relative;
+ list-style: none;
+ margin: 0px 35px;
+ cursor: pointer;
+}
+
+.iconsA{  
+  text-decoration: none;
+}
+
+ul li a .fa{
+  font-size: 52px;
+  color: rgb(61, 61, 61);
+}
+
+.iconsLI::before{
+  font-family: fontAwesome;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 50px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.iconsLI:nth-child(1)::before{
+  content: '\f09b';
+  color: #5C6BC0;
+  border-bottom: 4px solid #5C6BC0;
+}
+
+
+
+.iconsLI:nth-child(2)::before{
+  content: '\f0e1';
+  color: #1877B5;
+  border-bottom: 4px solid #1877B5;
+}
+
+.iconsLI:nth-child(3)::before{
+  content: '\f0e0';
+  color: #E64135;
+  border-bottom: 4px solid #E64135;
+}
+
+.iconsLI:nth-child(4)::before{
+  content: '\f15c';
+  color: #fff;
+  border-bottom: 4px solid #fff;
+}
+
+.iconsLI:hover::before{
+  height: 100%;
+}
+
+
+
+
+
+
+
+.projectContainer{
+  position: absolute;
+  top: 22%;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+.projectContainer .card{
+  position: relative;
+  min-width: 280px;
+  height: 360px;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+              inset -5px -5px 15px rgba(255,255,255,0.1),
+               5px 5px 15px rgba(0,0,0,0.3),
+               -5px -5px 15px rgba(255,255,255,0.1);
+
+  border-radius: 15px;
+  margin: 30px;
+}
+
+
+
+.projectContainer .card .box{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  background: #2a2b2f;
+  border: 2px solid #1e1f23;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.projectContainer .card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.projectContainer .card .box::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.projectContainer .card .box:hover{
+  transform: translateY(-50px);
+  box-shadow: 0 40px 70px rgba(0,0,0,0.5);
+}
+
+.projectContainer .card .box .content{
+  padding: 20px;
+  text-align: center;
+}
+
+.projectContainer .card .box .content h3{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  font-size: 5em;
+  color: rgba(255, 255, 255, 0.05);
+}
+
+
+.projectContainer .card .box .content h4{
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.projectContainer .card .box .content p{
+  margin-top: 13px;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.projectContainer .card .box .content a{
+  position: relative;
+  display: inline-block;
+  padding: 10px 25px;
+  background: #000;
+  margin-top: 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 400;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.projectContainer .card:nth-child(1) .box .content a{
+  background: #2196f3;
+}
+
+.projectContainer .card:nth-child(2) .box .content a{
+  background: #97dc47;
+}
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Index page</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="cont">
+  <img data-tilt data-tilt-max = "10"  data-tilt-reverse="true" data-tilt data-tilt-full-page-listening class="logo" src="My.jpg" alt="My profile photo" data-speed="2">
+</div>
+
+<div class="intro">
+<div class="name">
+  Dhruvin Bhayani </div>
+  <div class="uwinContent">
+  <img class="uwinLogo" src="method-draw-image.svg" alt="University of Windsor Logo">
+  </div>
+  <div class="uwinName">University Of Windsor '21</div>
+  
+  
+  <div class="typeContainer">
+    <p>I am a <span class="typed-text"></span><span class="cursor typing">&nbsp;</span></p>
+  </div>
+</div>
+
+<div class="icons">
+  <ul class="iconsUL">
+    <li class="iconsLI"><a class="iconsA" href="https://github.com/dhruvin2803"> <i class="fa fa-github" aria-hidden="true"></i>  </a></li> <!-- GITHUB-->
+    <li class="iconsLI"><a class="iconsA" href="https://ca.linkedin.com/in/dhruvin-bhayani-90230817b"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li> <!-- LINKDIN -->
+    <li class="iconsLI"><a class="iconsA" href="mailto:dhruvinbhayani000@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> </a></li> <!-- GMAIL -->
+    <li class="iconsLI"><a class="iconsA" href="Dhruvin_s_Resume.pdf"><i class="fa fa-file-text" aria-hidden="true"></i> </a></li> <!-- RESUME -->
+  </ul>
+</div>
+
+<div class="projectContainer">
+   <div class="card">
+     <div class="box">
+       <div class="content">
+         <h3>01</h3>
+         <h4>Data Set</h4>
+         <p>A project for better way to deliver open data information to the local taxpayers. Made using java and JavaFX.</p>
+         <a href="https://github.com/dhruvin2803">Github</a>
+       </div>
+     </div>
+   </div>
+
+   <div class="card">
+    <div class="box">
+      <div class="content">
+        <h3>02</h3>
+        <h4>2.5D Game</h4>
+        <p>A 2.5d platformer game that is similar to super mario game.This project was Made using unity3d and C#.</p>
+        <a href="https://github.com/dhruvin2803">Github</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- particles.js container -->
+<div id="particles-js"></div>
+
+<!-- scripts -->
+<script src="type.js"></script>
+<script src="particles.js"></script>
+<script src="app.js"></script>
+<script src="vanilla-tilt.min.js"></script>
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
+</body>
+</html>
